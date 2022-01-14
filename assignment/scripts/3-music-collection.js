@@ -18,7 +18,7 @@ function addToCollection(title, artist, yearPublished){
 
 }
 
-addToCollection('Red', 'Taylor Swift', '2012');
+addToCollection('Prisencolinensinainciusol (single)', 'Adriano Celentano', '1972');
 console.log('album 1 ', album);
 addToCollection('Dopamine', 'Borns', '2015');
 console.log('album 2 ', album);
@@ -34,3 +34,15 @@ addToCollection('Plural', 'Electric Guest', '2017');
 console.log('album 7', album);
 
 console.log('collection array', collection);
+
+function showCollection(collection){
+  console.log('number of items in collection array', collection.length);
+  // for (let i = 0; i < collection.length; i++) {
+  //   console.log(album.title);
+  // }
+  for (let item of collection){
+    console.log(item.title, 'by', item.artist, ', published in', item.yearPublished);
+
+  }
+}
+showCollection(collection)
