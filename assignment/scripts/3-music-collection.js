@@ -32,6 +32,7 @@ addToCollection('Record Player (single)', 'Daisy The Great', '2021');
 console.log('album 6', album);
 addToCollection('Plural', 'Electric Guest', '2017');
 console.log('album 7', album);
+addToCollection('Someone Great', 'LCD Soundsystem', '2007')
 
 console.log('collection array', collection);
 
@@ -42,7 +43,22 @@ function showCollection(collection){
   // }
   for (let item of collection){
     console.log(item.title, 'by', item.artist, ', published in', item.yearPublished);
-
   }
 }
 showCollection(collection)
+
+function findByArtist(artist){
+  let array1 = [];
+  for (let item of collection){
+    if (item.artist === artist) {
+      array1.push(item)
+    }
+    // else {
+    //   return 'empty array'
+    // }
+  }
+  return array1
+}
+console.log(findByArtist('skjfhbv'));
+console.log(findByArtist('LCD Soundsystem'));
+console.log(findByArtist('Borns'));
